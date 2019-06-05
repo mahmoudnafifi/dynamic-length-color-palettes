@@ -7,6 +7,15 @@ function [K, C, Labels] = getBestCP_( I, visualize )
 %K: number of best colors per palette 
 %C: best color palette
 %Labels: labeled pixels to know the pixels associated with each color in C
+
+%Version 2: Here, we use superpixels for the first stage of clustering instead of the color palette extraction followed by DBSCAN. 
+
+
+
+%Please cite:
+%Afifi, M. “Dynamic Length Colour Palettes.” Electronics Letters, vol. 55, no. 9, Institution of Engineering and Technology ({IET}), May 2019, pp. 531–533, doi:10.1049/el.2019.0064.
+
+
 I = imresize(I,[400,400],'nearest');
 if nargin==1
     visualize=1;
@@ -19,7 +28,7 @@ weights = zeros(initial_K,1);
 for i  = 1 : initial_K
     weights(i) = sum(Labels(:) == i)./length(Labels(:));
 end
-[IDs, ~]= DBSCAN(rgb2lab(C_initial),20,2);
+[IDs, ~]= DBSCAN(rgb2lab(C_initial),20,2); %change the threshold to get different results. Here, we use 17 as a threshold of deltaE76 value.
 K = max(unique(IDs))+1;
 sigma=40; %sigma
 [C, Labels] = extract_theme(I, K, sigma,1); %get color palette
