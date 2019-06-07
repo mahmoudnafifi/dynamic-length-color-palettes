@@ -1,5 +1,5 @@
 # Dynamic length color palettes
-![figure](hhttps://www.mathworks.com/matlabcentral/mlc-downloads/downloads/8ee132c2-745c-4063-addf-c8e8a290d875/7bcf8a09-2420-4ad2-a32e-863a7b4bba9f/images/screenshot.jpg)
+![figure](https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/8ee132c2-745c-4063-addf-c8e8a290d875/7bcf8a09-2420-4ad2-a32e-863a7b4bba9f/images/screenshot.jpg)
 
 ### Quick start
 Change `imgname` to your input image name in `demo.m`, then run. 
