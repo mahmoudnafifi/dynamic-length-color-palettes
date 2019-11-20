@@ -9,3 +9,5 @@ You can test our online demo from [here](http://130.63.97.192/DynamicCP/demo.php
 
 Publication: 
 Mahmoud Afifi, "Dynamic length colour palettes.", Electronics Letters (2019).
+
+[![View Dynamic length color palettes on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/71720-dynamic-length-color-palettes)
